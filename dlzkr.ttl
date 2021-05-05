@@ -12,7 +12,7 @@
     owl:versionInfo "0.1" . 
 
 :Doelzoeker a owl:Class ; 
-    :label "Doelzoeker" ; 
+    rdfs:label "Doelzoeker" ; 
     :name "Doelzoeker" ;
     :contains :Goal ;
     :definedBy :User .
@@ -21,3 +21,58 @@
     rdfs:label "Goal" ;
     :name "Goal".
 
+:shows rdf:type owl:ObjectProperty ;
+    rdfs:label "shows"; 
+    rdfs:domain :Doelzoeker;
+    rdfs:range :CanvasItem . 
+
+:CanvasItem rdf:type owl:Class ;
+    rdfs:label "CanvasItem" ;
+    :name "CanvasItem" ;
+
+:coordinates rdf:type owl:DatatypeProperty ;
+    rdfs:label "coordinates" ;
+    rdfs:domain :CanvasItem ;
+    rdfs:range xsd:string .
+
+:satisfiedWithProgress rdf:type owl:DatatypeProperty ;
+    rdfs:label "satisfiedWithProgress" ; 
+    rdfs:domain :Goal ;
+    rdfs:range xsd:boolean . 
+
+:emphasis rdf:type owl:DatatypeProperty ;
+    rdfs:label "emphasis" ; 
+    rdfs:domain :Goal ;
+    rdfs:range xsd:boolean .
+
+:contains rdf:type owl:ObjectProperty ;
+    rdfs:label "contains"; 
+    rdfs:domain :Doelzoeker;
+    rdfs:range :Goal . 
+
+:User rdf:type owl:Class ; 
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "User" . 
+
+:TimeWindow a owl:Class ;
+    owl:oneOf (:verleden :heden :toekomst) .
+
+:definedBy rdf:type owl:ObjectProperty ;
+    rdfs:label "definedBy"; 
+    rdfs:domain :Doelzoeker;
+    rdfs:range :User . 
+
+:createdAt rdf:type owl:DatatypeProperty ;
+    rdfs:label "createdAt"; 
+    rdfs:domain :Doelzoeker;
+    rdfs:range xsd:dateTime .
+
+:updatedAt rdf:type owl:DatatypeProperty ;
+    rdfs:label "updatedAt"; 
+    rdfs:domain :Doelzoeker;
+    rdfs:range xsd:dateTime .
+
+:title rdf:type owl:DatatypeProperty ;
+       rdfs:label "title"; 
+       rdfs:domain :Doelzoeker, :Goal ;
+       rdfs:range xsd:string . 

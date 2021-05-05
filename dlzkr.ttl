@@ -30,7 +30,7 @@ dlzkr:contains rdf:type owl:ObjectProperty ;
           rdfs:domain dlzkr:Doelzoeker;
           rdfs:range dlzkr:Goal . 
 
-dlzkr:User a owl:Class ; 
+dlzkr:User rdf:type owl:Class ; 
       rdfs:subClassOf foaf:Person ;
       rdfs:label "User" . 
 

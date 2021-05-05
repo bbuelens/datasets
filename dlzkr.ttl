@@ -26,3 +26,6 @@ dlzkr:contains rdf:type owl:ObjectProperty ;
 dlzkr:User a owl:Class ; 
       rdfs:subClassOf foaf:Person ;
       rdfs:label "User" . 
+
+dlzkr:TimeWindow a owl:Class ;
+    owl:oneOf (:verleden :heden :toekomst) .

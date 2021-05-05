@@ -1,0 +1,18 @@
+@prefix dlzkr: <http://vito.be/voc/dlzkr#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+dlzkr:Doelzoeker a owl:Class ; 
+    dlzkr:name "Doelzoeker" ;
+    dlzkr:contains dlzkr:Goal .
+
+dlzkr:Goal rdf:type owl:Class ;
+    dlzkr:name "Goal" ;
+    rdfs:label "Goal" .
+
+dlzkr:satisfiedWithProgress rdf:type owl:DatatypeProperty ;
+                       rdfs:label "satisfiedWithProgress" ; 
+                       rdfs:domain :Goal ;
+                       rdfs:range xsd:boolean . 

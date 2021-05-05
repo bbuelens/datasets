@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://vito.be/voc/dlzkr> rdf:type owl:Ontology ;
     dc:title "Doelzoeker ontology" ; 
@@ -51,3 +52,8 @@ dlzkr:definedBy rdf:type owl:ObjectProperty ;
     rdfs:label "definedBy"; 
     rdfs:domain dlzkr:Doelzoeker;
     rdfs:range dlzkr:User . 
+
+dlzkr:createdAt rdf:type owl:DatatypeProperty ;
+           rdfs:label "createdAt"; 
+           rdfs:domain dlzkr:Doelzoeker;
+           rdfs:range xsd:dateTime .

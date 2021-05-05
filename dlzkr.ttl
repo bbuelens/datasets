@@ -28,7 +28,7 @@
 
 :CanvasItem rdf:type owl:Class ;
     rdfs:label "CanvasItem" ;
-    :name "CanvasItem" ;
+    :name "CanvasItem" .
 
 :coordinates rdf:type owl:DatatypeProperty ;
     rdfs:label "coordinates" ;

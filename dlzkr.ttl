@@ -5,13 +5,19 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
 
+<http://vito.be/voc/dlzkr> rdf:type owl:Ontology ;
+    dc:title "Doelzoeker ontology" ; 
+    dc:description "Draft Doelzoeker ontology"; 
+    owl:versionInfo "0.1" . 
+
 dlzkr:Doelzoeker a owl:Class ; 
+    rdfs:label "Doelzoeker" ; 
     dlzkr:name "Doelzoeker" ;
     dlzkr:contains dlzkr:Goal .
 
 dlzkr:Goal rdf:type owl:Class ;
-    dlzkr:name "Goal" ;
-    rdfs:label "Goal" .
+    rdfs:label "Goal" ;
+    dlzkr:name "Goal".
 
 dlzkr:satisfiedWithProgress rdf:type owl:DatatypeProperty ;
                        rdfs:label "satisfiedWithProgress" ; 

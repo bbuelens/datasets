@@ -16,3 +16,8 @@ dlzkr:satisfiedWithProgress rdf:type owl:DatatypeProperty ;
                        rdfs:label "satisfiedWithProgress" ; 
                        rdfs:domain dlzkr:Goal ;
                        rdfs:range xsd:boolean . 
+
+dlzkr:contains rdf:type owl:ObjectProperty ;
+          rdfs:label "contains"; 
+          rdfs:domain dlzkr:Doelzoeker;
+          rdfs:range dlzkr:Goal . 

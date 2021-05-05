@@ -1,4 +1,4 @@
-@prefix dlzkr: <http://vito.be/voc/dlzkr#> .
+@base <http://vito.be/voc/dlzkr#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,59 +11,13 @@
     dc:description "Draft Doelzoeker ontology"; 
     owl:versionInfo "0.1" . 
 
-dlzkr:Doelzoeker a owl:Class ; 
-    rdfs:label "Doelzoeker" ; 
-    dlzkr:name "Doelzoeker" ;
-    dlzkr:contains dlzkr:Goal ;
-    dlzkr:definedBy dlzkr:User .
+:Doelzoeker a owl:Class ; 
+    :label "Doelzoeker" ; 
+    :name "Doelzoeker" ;
+    :contains :Goal ;
+    :definedBy :User .
 
-dlzkr:Goal rdf:type owl:Class ;
+:Goal rdf:type owl:Class ;
     rdfs:label "Goal" ;
-    dlzkr:name "Goal".
+    :name "Goal".
 
-dlzkr:shows rdf:type owl:ObjectProperty ;
-    rdfs:label "shows"; 
-    rdfs:domain dlzkr:Canvas;
-    rdfs:range dlzkr:Doelzoeker . 
-
-dlzkr:satisfiedWithProgress rdf:type owl:DatatypeProperty ;
-    rdfs:label "satisfiedWithProgress" ; 
-    rdfs:domain dlzkr:Goal ;
-    rdfs:range xsd:boolean . 
-
-dlzkr:emphasis rdf:type owl:DatatypeProperty ;
-    rdfs:label "emphasis" ; 
-    rdfs:domain dlzkr:Goal ;
-    rdfs:range xsd:boolean .
-
-dlzkr:contains rdf:type owl:ObjectProperty ;
-    rdfs:label "contains"; 
-    rdfs:domain dlzkr:Doelzoeker;
-    rdfs:range dlzkr:Goal . 
-
-dlzkr:User rdf:type owl:Class ; 
-    rdfs:subClassOf foaf:Person ;
-    rdfs:label "User" . 
-
-dlzkr:TimeWindow a owl:Class ;
-    owl:oneOf (dlzkr:verleden dlzkr:heden dlzkr:toekomst) .
-
-dlzkr:definedBy rdf:type owl:ObjectProperty ;
-    rdfs:label "definedBy"; 
-    rdfs:domain dlzkr:Doelzoeker;
-    rdfs:range dlzkr:User . 
-
-dlzkr:createdAt rdf:type owl:DatatypeProperty ;
-    rdfs:label "createdAt"; 
-    rdfs:domain dlzkr:Doelzoeker;
-    rdfs:range xsd:dateTime .
-
-dlzkr:updatedAt rdf:type owl:DatatypeProperty ;
-    rdfs:label "updatedAt"; 
-    rdfs:domain dlzkr:Doelzoeker;
-    rdfs:range xsd:dateTime .
-
-dlzkr:title rdf:type owl:DatatypeProperty ;
-       rdfs:label "title"; 
-       rdfs:domain dlzkr:Doelzoeker, dlzkr:Goal ;
-       rdfs:range xsd:string . 

@@ -14,5 +14,5 @@ dlzkr:Goal rdf:type owl:Class ;
 
 dlzkr:satisfiedWithProgress rdf:type owl:DatatypeProperty ;
                        rdfs:label "satisfiedWithProgress" ; 
-                       rdfs:domain :Goal ;
+                       rdfs:domain dlzkr:Goal ;
                        rdfs:range xsd:boolean . 

@@ -14,7 +14,6 @@
 dlzkr:Doelzoeker a owl:Class ; 
     rdfs:label "Doelzoeker" ; 
     dlzkr:name "Doelzoeker" ;
-    dc:title "Doelzoeker" ; 
     dlzkr:contains dlzkr:Goal ;
     dlzkr:definedBy dlzkr:User .
 
@@ -63,3 +62,8 @@ dlzkr:updatedAt rdf:type owl:DatatypeProperty ;
     rdfs:label "updatedAt"; 
     rdfs:domain dlzkr:Doelzoeker;
     rdfs:range xsd:dateTime .
+
+dlzkr:title rdf:type owl:DatatypeProperty ;
+       rdfs:label "title"; 
+       rdfs:domain dlzkr:Doelzoeker, dlzkr:Goal ;
+       rdfs:range xsd:string . 

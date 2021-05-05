@@ -13,7 +13,8 @@
 dlzkr:Doelzoeker a owl:Class ; 
     rdfs:label "Doelzoeker" ; 
     dlzkr:name "Doelzoeker" ;
-    dlzkr:contains dlzkr:Goal .
+    dlzkr:contains dlzkr:Goal ;
+    dlzkr:definedBy dlzkr:User .
 
 dlzkr:Goal rdf:type owl:Class ;
     rdfs:label "Goal" ;
@@ -35,3 +36,8 @@ dlzkr:User a owl:Class ;
 
 dlzkr:TimeWindow a owl:Class ;
     owl:oneOf (:verleden :heden :toekomst) .
+
+dlzkr:definedBy rdf:type owl:ObjectProperty ;
+    rdfs:label "definedBy"; 
+    rdfs:domain dlzkr:Doelzoeker;
+    rdfs:range dlzkr:User . 

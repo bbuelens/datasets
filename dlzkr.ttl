@@ -20,19 +20,29 @@ dlzkr:Goal rdf:type owl:Class ;
     rdfs:label "Goal" ;
     dlzkr:name "Goal".
 
+dlzkr:shows rdf:type owl:ObjectProperty ;
+    rdfs:label "shows"; 
+    rdfs:domain dlzkr:Canvas;
+    rdfs:range dlzkr:Doelzoeker . 
+
 dlzkr:satisfiedWithProgress rdf:type owl:DatatypeProperty ;
-                       rdfs:label "satisfiedWithProgress" ; 
-                       rdfs:domain dlzkr:Goal ;
-                       rdfs:range xsd:boolean . 
+    rdfs:label "satisfiedWithProgress" ; 
+    rdfs:domain dlzkr:Goal ;
+    rdfs:range xsd:boolean . 
+
+dlzkr:emphasis rdf:type owl:DatatypeProperty ;
+    rdfs:label "emphasis" ; 
+    rdfs:domain dlzkr:Goal ;
+    rdfs:range xsd:boolean .
 
 dlzkr:contains rdf:type owl:ObjectProperty ;
-          rdfs:label "contains"; 
-          rdfs:domain dlzkr:Doelzoeker;
-          rdfs:range dlzkr:Goal . 
+    rdfs:label "contains"; 
+    rdfs:domain dlzkr:Doelzoeker;
+    rdfs:range dlzkr:Goal . 
 
 dlzkr:User rdf:type owl:Class ; 
-      rdfs:subClassOf foaf:Person ;
-      rdfs:label "User" . 
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "User" . 
 
 dlzkr:TimeWindow a owl:Class ;
     owl:oneOf (dlzkr:verleden dlzkr:heden dlzkr:toekomst) .
